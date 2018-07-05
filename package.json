@@ -9,7 +9,9 @@
     "webpack": "node ./node_modules/webpack-command/lib/cli.js",
     "build": "npm run webpack -- --run-prod --progress",
     "watch": "npm run webpack -- --run-dev --watch",
-    "dev": "webpack-serve"
+    "dev": "webpack-serve",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "jest": {},
   "dependencies": {
@@ -24,6 +26,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
+    "all-contributors-cli": "^5.2.1",
     "babel-loader": "^8.0.0-beta.3",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^0.28.11",
