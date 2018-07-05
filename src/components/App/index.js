@@ -13,7 +13,7 @@ export default class App extends React.Component {
     this.state = {
       input: '',
       joshd: '',
-      strength: 0.1
+      strength: 0.5
     }
 
     this.changeText = this.changeText.bind(this);
@@ -92,7 +92,7 @@ export default class App extends React.Component {
                   <br />
                   <input type="text" id="asd" placeholder="Type something to Joshify it!" onChange={this.changeText} value={this.state.input} />
                   <p><strong>Strength ({this.state.strength}):</strong></p>
-                  <input type="range" min="0" max="100" value="10" onChange={this.changeStrength} />
+                  <input type="range" min="0" max="100" onChange={this.changeStrength} />
                 </div>
               </div>
             </div>
