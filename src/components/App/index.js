@@ -82,7 +82,7 @@ export default class App extends React.Component {
               <div className={classNames(styles.col, styles['col-12'])}>
                 <div className={styles.card}>
                   <div className={styles['card-header']}>
-                    <h2>Josh It!</h2>
+                    <h2>Joshctonary</h2>
                   </div>
                   <br />
                   <input type="text" id="asd" placeholder="Type something to Joshify it!" onChange={this.changeText} value={this.state.input} />
