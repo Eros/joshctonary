@@ -1,0 +1,23 @@
+{
+  "projectName": "joshctonary",
+  "projectOwner": "exception",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "exception",
+      "name": "Erik",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5695356?v=4",
+      "profile": "https://github.com/exception",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    }
+  ]
+}
