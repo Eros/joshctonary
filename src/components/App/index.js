@@ -52,10 +52,6 @@ export default class App extends React.Component {
     return Math.floor(Math.random() * (max - min)) + max;
   }
 
-  componentDidMount() {
-    console.log(this.joshIt("i love penis", 0.9));
-  }
-
   changeText(event) {
     event.preventDefault();
     event.persist();
