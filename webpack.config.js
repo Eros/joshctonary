@@ -124,6 +124,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env)
     }),
-    isProd && new MiniCssExtractPlugin()
+    isProd && new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin([
+      {from: './favicon.ico', to: paths.appBuild}
+    ])
   ].filter(Boolean)
 };
