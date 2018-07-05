@@ -19,37 +19,36 @@ export default class App extends React.Component {
     this.changeText = this.changeText.bind(this);
     this.joshIt = this.joshIt.bind(this);
     this.changeStrength = this.changeStrength.bind(this);
+    this.shuffle = this.shuffle.bind(this);
+    this.rand = this.rand.bind(this);
   }
 
-  joshIt(word, strength) {
-    if (word === undefined) return;
-    const length = word.length;
-    const letters = word.split("");
-    for (let index = 0; index < length; index++) {
-      const element = letters[index];
-      if (element === "" || element === " ") {
-        continue;
-      }
-      const rand = Math.random();
-      if (rand <= strength) {
-        let randIndex = this.getRandomInt(0, length);
-        let temp = letters[randIndex];
-        while (temp === "" || temp === " ") {
-          randIndex = this.getRandomInt(0, length);
-          temp = letters[randIndex];
-        }
-        letters[randIndex] = element;
-        letters[index] = temp;
+  // Credit to Hugo (@hugmanrique) for writing the randomization, original randomization can be found in the _legacy.js file.
+  rand(strength) {
+    return Math.random() <= strength;
+  }
+
+  shuffle(array, strength) {
+    for (let i = array.length - 1; i > 0; i--) {
+      if (this.rand(strength)) {
+        const pos = Math.floor(Math.random() * (i + 1));
+  
+        const x = array[i];
+        array[i] = array[pos];
+        array[pos] = x;
       }
     }
-
-    return letters.join("").trim();
-  }
   
-  getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + max;
+    return array;
+  }
+
+  joshIt(sentence, strength) {
+    const words = sentence
+      .split(' ')
+      .map(word => this.shuffle(word.split(''), strength))
+      .map(array => array.join(''));
+  
+    return this.shuffle(words, strength).join(' ').trim();
   }
 
   changeText(event) {
