@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+
+ncp-debug.log
+npm-debug.log
+.DS_Store
+*.pyc
+.module-cache
+*.gem
+*.log
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+
+old/

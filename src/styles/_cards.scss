@@ -1,0 +1,53 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 264px;
+    margin-top: 24px;
+    padding: 24px;
+    background: #ffffff;
+    color: rgba(14, 30, 37, .54);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .12);
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.card-hero {
+    max-width: 680px;
+}
+
+.card-header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 40px;
+}
+
+.card-header::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: 0;
+    background: #f5f7f9;
+}
+
+.card-title {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-self: baseline;
+    width: 100%;
+}
